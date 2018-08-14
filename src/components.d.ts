@@ -25,12 +25,16 @@ declare global {
   interface HTMLAttributes {}
 }
 
+import {
+  ExampleObject,
+} from './components/my-component/my-component';
 
 declare global {
 
   namespace StencilComponents {
     interface MyComponent {
       'name': string;
+      'obj': ExampleObject;
       'repeat': number;
     }
   }
@@ -55,6 +59,7 @@ declare global {
   namespace JSXElements {
     export interface MyComponentAttributes extends HTMLAttributes {
       'name'?: string;
+      'obj'?: ExampleObject;
       'onOk'?: (event: CustomEvent<{ message: string }>) => void;
       'repeat'?: number;
     }
