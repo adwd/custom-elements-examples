@@ -4,7 +4,11 @@ export const config: Config = {
   namespace: 'mycomponent',
   outputTargets:[
     {
-      type: 'dist'
+      type: 'dist',
+      esmLoaderPath: '../loader'
+    },
+    {
+      type: 'docs-readme'
     },
     {
       type: 'www',
